@@ -91,6 +91,18 @@ body::before {
     z-index: 1000;
 }
 
+@media (max-width: 768px){
+  body{
+    padding: 0 20px;
+  }
+
+  .navbar{
+    width: 100%;
+    max-width: 100%;
+  }
+
+}
+
 .dropdown {
   float: left;
   overflow: hidden;
@@ -174,8 +186,6 @@ body::before {
     
 }
 
-.my-img{
-}
 
 .hero-section-top-div{
     font-family: 'Archivo', sans-serif;
