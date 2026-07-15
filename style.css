@@ -91,17 +91,7 @@ body::before {
     z-index: 1000;
 }
 
-@media (max-width: 768px){
-  body{
-    padding: 0 20px;
-  }
 
-  .navbar{
-    width: 100%;
-    max-width: 100%;
-  }
-
-}
 
 .dropdown {
   float: left;
@@ -110,6 +100,27 @@ body::before {
   align-items: center;
   justify-content: space-between;
   gap: 180px;
+}
+
+@media (max-width: 768px){
+  body{
+    padding: 0 20px;
+  }
+
+  .navbar{
+    width: 100%;
+    max-width: 100%;
+     width:390px;
+  }
+  .dropdown {
+  float: left;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 220px;
+}
+
 }
 
 .nav-bar-name{
