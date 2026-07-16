@@ -1219,13 +1219,6 @@ hr{
     width: 20px;
 }
 
-
-
-
-
-
-
-
 }
 
 
@@ -1257,12 +1250,35 @@ hr{
 .talk-main-div{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
 }
 
+.talk-div-left-bottom{
+    margin-top: auto;
+}
+
+.talk-div-left{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.talk-div-left-top h1{
+    margin: 0%;
+    font-size: 80px;
+}
+
+
+.talk-div-left-top p{
+    font-size: 15px;
+    margin: 0%;
+}
+
+
 .talk-div-right{
-    background-color: antiquewhite;
-    width: 500px;
+    width: 470px;
     height: 400px;
 }
 
@@ -1278,11 +1294,205 @@ hr{
     gap: 20px;
 }
 
+
+.talk-div-left-bottom-icon-div{
+    background-color: rgb(110, 109, 109);
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .talk-icons{
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
     cursor: pointer;
 }
+
+
+.talk-div-right{
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+    height: 410px;
+}
+
+.form-label{
+    font-size:15px;
+}
+
+
+.input{
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border-color: white;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.foam-text-area{
+    margin-top: 10px;
+    border-radius: 15px;
+    height: 120px;
+    border-color: white;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+
+.form-button{
+    margin-top: 14px;
+    height: 50px;
+    font-size: 17px;
+    color: rgb(49, 49, 49);
+    border-radius: 15px;
+    border: none;
+}
+
+
+
+
+@media (max-width: 768px){
+  body{
+    padding: 0 20px;
+  }
+
+  .talk-main-section{
+    width: 100%;
+    max-width: 100%;
+  }
+
+.talk-main-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+}
+
+.talk-div-left-bottom{
+    margin-top: auto;
+}
+
+.talk-div-left{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.talk-div-left-top h1{
+    margin: 0%;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+
+.talk-div-left-top p{
+    font-size: 15px;
+    margin: 0%;
+    margin-bottom: 20px;
+}
+
+
+.talk-div-right{
+    width: 470px;
+    height: 400px;
+}
+
+.talk-div-right-foam{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.talk-div-left-bottom{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.talk-div-left-bottom-icon-div{
+    background-color: rgb(110, 109, 109);
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.talk-icons{
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.talk-div-right{
+    margin-top: 50px;
+    padding: 20px;
+    color: white;
+    border-radius: 15px;
+    height: 430px;
+    width: 390px;
+}
+
+.form-label{
+    font-size:15px;
+}
+
+
+.input{
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border-color: white;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.foam-text-area{
+    margin-top: 10px;
+    border-radius: 15px;
+    height: 120px;
+    border-color: white;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+
+.form-button{
+    margin-top: 14px;
+    height: 50px;
+    font-size: 17px;
+    color: rgb(49, 49, 49);
+    border-radius: 15px;
+    border: none;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1312,4 +1522,28 @@ hr{
     gap: 30px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+}
+
+
+
+@media (max-width: 768px){
+  body{
+    padding: 0 20px;
+  }
+
+  .hero-diss-1-section{
+    width: 100%;
+    max-width: 100%;
+  }
+  .hero-diss-1-section{
+    margin: 100px 0;
+    padding: 0%;
+    width: 430px;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.hero-diss-1-section-p{
+    padding: 0%;
 }
