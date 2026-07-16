@@ -746,6 +746,7 @@ hr{
 @media (max-width: 768px){
   body{
     padding: 0 20px;
+    color: red;
   }
 
 .featured-projects-section{
@@ -805,13 +806,13 @@ hr{
 .featured-projects-main-div-1-sub{
     background-color: rgb(31, 108, 209);
     height: 250px;
-    width: 450px;
+    width: 400px;
     border-radius: 25px;
     overflow: hidden;
 }
 
 .featured-projects-main-div-1-img{
-    margin: 80px 10px 0px 60px;
+    margin:50px 0 0px 25px;
     height: 200px;
     width: 350px;
     border-radius:25px 25px 0 0 ;
@@ -851,8 +852,6 @@ hr{
 
 
 
-
-
 .testimonials-section{
     margin: 100px 0;
     padding: 0%;
@@ -868,51 +867,79 @@ hr{
 .testimonials-main-div{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;  
     gap: 20px;
-}
-
-.testimonials-div-1-bottom-img{
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
 }
 
 .testimonials-div-1{
     margin-top: 0%;
     padding: 20px;
-    width: 440px;
-    height:350px;
+    width: 280px;           
+    height: 350px;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 110px;
     color: white;
 }
 
-
 .testimonials-div-1-top{
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .testimonials-div-1-bottom{
+    margin-top: auto;      
     display: flex;
-    align-items: start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
 }
 
-.testimonials-div-1-bottom-img{
+.testimonials-div-1-bottom-imgwrap{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.testimonials-div-1-bottom-img-diss{
-    display: flex;
-    flex-direction: column;
+
+.testimonials-div-1-bottom-img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
+.testimonials-div-1-bottom-img-diss{
+    display: flex;
+    margin: 0%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.testimonials-div-1-bottom-img-diss p{
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+
+
+
+
+
+@media (max-width: 768px){
+  body{
+    padding:0px;
+  }
+
+  .testimonials-section{
+    width: 100%;
+    max-width: 100%;
+  }
+
+ 
+}
 
 
 
