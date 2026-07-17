@@ -1474,7 +1474,7 @@ hr{
     margin-top: 14px;
     height: 50px;
     font-size: 17px;
-    color: rgb(49, 49, 49);
+    color: red; 
     border-radius: 15px;
     border: none;
 }
