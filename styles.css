@@ -1,0 +1,463 @@
+body{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f3ef;
+    position: relative;
+    overflow-x: hidden;
+    
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+
+
+.noise-bg-light {
+  background-color: #f5f3ef;
+  position: relative;
+  overflow: hidden;
+}
+
+.noise-bg-light::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.noise-bg {
+  background-color: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.noise-bg::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+
+
+
+.noise-text {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.15'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navbar {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    width: 350px;
+    color: white;
+    border-radius: 25px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.dropdown {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+
+.nav-bar-name{
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600; 
+}
+
+.dropbtn{
+    color: white;
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  padding: 14px 16px;
+  background-color: white;
+  margin: 0;
+  cursor: pointer;
+}
+
+
+.dropdown.active .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  font-family: 'Archivo', sans-serif; 
+  font-weight: 400;
+  display: none;
+  top: 50px;
+  padding-top: 20px;
+  width: 100%;
+  right: 0%;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 0 0 15px 15px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(0, 0, 0);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.nav-bar-link  {
+    background: rgb(255, 255, 255);
+    margin: 0  20px 20px ;
+    width: 80px;
+    border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown.active .dropdown-content {
+  display: block;
+}
+
+
+
+@media(max-width: 768px){
+    .navbar {
+        box-sizing: border-box;
+        padding: 10px;
+        background-color: rgb(0, 0, 0);
+        width: 80%;
+        color: white;
+        border-radius: 25px;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
+    .dropdown {
+        width: 100%;
+        float: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media(max-width: 480px){
+    .navbar {
+        box-sizing: border-box;
+        padding: 10px;
+        margin: 10px;
+        background-color: rgb(0, 0, 0);
+        width: 80%;
+        color: white;
+        border-radius: 25px;
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
+    .dropdown {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        float: left;
+    }
+}
+
+    
+
+
+
+
+.hero-section{
+    margin: 140px 0 0 0 ;
+    padding: 0%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+
+.hero-section-top-div{
+    width: 100%;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(40px, 15vw, 170px);
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    flex-direction: column;
+}
+
+
+
+.hero-section-top-div-h-1
+{
+    margin: 0%;
+    padding: 0%;
+    line-height: 0.9;
+    gap: 0;
+}
+
+.hero-section-top-div-h-2{
+    margin: 0%;
+    padding: 0%;
+    line-height: 0.9;
+    gap: 0;
+}
+
+.hero-section-top-div-h-1:hover{
+    text-decoration: underline;
+}
+
+.hero-section-top-div-h-2:hover{
+    text-decoration: underline;
+}
+
+
+.hero-section-bottom-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.hero-section-bottom-div-left{
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600; 
+    font-size: 65px;
+}
+
+.hero-section-bottom-div-right{
+    font-size: 20px;
+}
+
+.my-img-div{
+    display: none;
+}
+
+
+
+
+
+
+@media(max-width: 768px){
+    
+.hero-section{
+    margin: 140px 0 0 0 ;
+    padding: 0%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+
+.hero-section-top-div{
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    text-align: center;
+}
+
+.hero-section-bottom-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section-bottom-div-left{
+    display: none;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600; 
+    font-size: 65px;
+}
+
+.hero-section-bottom-div-right p{
+    margin: 4px;
+    font-size: 20px;
+}
+
+.my-img-div{
+    display: block;
+}
+
+.my-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    width: 120px;
+}
+    
+
+}
+
+
+
+
+
+
+
+@media(max-width: 480px){
+       
+.hero-section{
+    margin: 140px 0 0 0 ;
+    padding: 0%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+
+.hero-section-top-div{
+    font-family: 'Archivo', sans-serif;
+    font-weight: 800; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    text-align: center;
+}
+
+.hero-section-bottom-div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section-bottom-div-left{
+    display: none;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 600; 
+    font-size: 65px;
+}
+
+.hero-section-bottom-div-right p{
+    margin: 4px;
+    font-size: 15px;
+}
+
+.my-img-div{
+    display: block;
+}
+
+.my-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 160px;
+    width: 120px;
+}
+    
+}
